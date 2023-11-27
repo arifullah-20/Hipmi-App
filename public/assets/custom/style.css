@@ -1,0 +1,31 @@
+.table-left-heading {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-left-heading thead, .table-left-heading tbody, .table-left-heading th, .table-left-heading td, .table-left-heading tr {
+    display: block;
+}
+
+.table-left-heading thead th {
+    text-align: left;
+}
+
+.table-left-heading tbody {
+    height: 200px; /* Sesuaikan tinggi tbody sesuai kebutuhan Anda */
+    overflow-y: auto;
+}
+
+.table-left-heading tbody tr {
+    display: flex;
+}
+
+.table-left-heading tbody td {
+    text-align: left;
+    flex: 1;
+}
+
+.table-left-heading-responsive {
+    overflow-x: auto;
+}

@@ -33,7 +33,7 @@ class KategoriController extends Controller
         return view('admin.kategori.tambah');
      }
 
-    public function store(Request $request)
+    public function simpan(Request $request)
     {
         // Validasi data input
 

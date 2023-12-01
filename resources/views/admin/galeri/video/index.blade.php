@@ -5,7 +5,11 @@ Video
 
 @section('content')
 
-
+@if(Session::has('success'))
+    <div class="alert alert-success" role="alert">
+        {{ Session::get('success') }}
+    </div>
+@endif
 <div class="card">
     <div class="card-body">
         <div class="col-lg-4 col-md-6">
@@ -68,7 +72,7 @@ Video
                                 <iframe class="img-fluid rounded" src="{{$data->video}}" frameborder="0" allowfullscreen></iframe>
                             </div>
                             <br>
-                            <a class="btn btn-danger" href="">hapus</a>
+                            <a class="btn btn-danger" href="{{ route('hapus.video', ['id' => $data->id_video]) }}">hapus</a>
                         </div>
                     </div>
                 </div>

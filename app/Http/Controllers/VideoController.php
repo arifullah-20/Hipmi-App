@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class VideoController extends Controller
 {
@@ -25,7 +26,17 @@ class VideoController extends Controller
         return redirect()->route('data.video')->with('success', 'Kategori berhasil disimpan.');
     }
 
+    public function hapus($id)
+    {
+        DB::table('galeri_video')->where('id_video', $id)->delete();
 
+        // Menambahkan pesan flash ke session
+        Session::flash('success', 'Video berhasil dihapus');
 
-
+        return back();
+    }
 }
+
+
+
+

@@ -14,6 +14,7 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\PerusahaanController;
+use App\Http\Controllers\AnggotaController;
 
 
 
@@ -33,6 +34,14 @@ use App\Http\Controllers\PerusahaanController;
 //user controller
 Route::get('/user', [UserController::class, 'index'])->name('data.user');
 Route::get('/about', [UserController::class, 'about'])->name('data.about');
+route::get('/berita-detail/{slug}', [UserController::class,'detail'])->name('data.detail');
+route::get('/berita', [UserController::class,'berita'])->name('data.berita');
+route::get('/anggota', [UserController::class,'anggota'])->name('data.anggota');
+route::get('/contact', [UserController::class,'contact'])->name('data.contact');
+route::get('/vidio', [UserController::class,'vidio'])->name('data.vidio');
+
+
+
 
 //admin controller
 Route::get('/admin', [AdminController::class, 'home'])->name('admin.data');
@@ -81,15 +90,16 @@ Route::post('/simpan-jabatan', [JabatanController::class, 'simpan'])->name('kate
 //galeri video
 Route::get('/video-index', [VideoController::class, 'index'])->name('data.video');
 Route::post('/simpan-video', [VideoController::class, 'simpan'])->name('data.simpan');
+Route::get('/hapus-video/{id}', [VideoController::class, 'hapus'])->name('hapus.video');
 
 
 //galeri foto
-Route::get('/foto-index', [FotoController::class, 'index'])->name('data.video');
+Route::get('/foto-index', [FotoController::class, 'index'])->name('data.foto');
 Route::post('/simpan-foto', [FotoController::class, 'simpan'])->name('data.simpan');
 
 
 //profil controller
-Route::get('/profile-index', [ProfilController::class, 'index'])->name('data.video');
+Route::get('/profile-index', [ProfilController::class, 'index'])->name('data.profil');
 Route::post('/simpan-profile', [ProfileController::class, 'simpan'])->name('data.simpan');
 
 
@@ -100,3 +110,9 @@ Route::post('/simpan-sejarah/{id}', [SejarahController::class, 'simpan'])->name(
 
 Route::get('/perusahaan-index', [PerusahaanController::class, 'index'])->name('data.perusahaan');
 Route::post('/simpan-perusahaan', [PerusahaanController::class, 'simpan'])->name('data.simpan');
+
+
+//anggota controller
+Route::get('/anggota-index', [AnggotaController::class, 'index'])->name('data.perusahaan');
+Route::post('/simpan-anggota', [AnggotaController::class, 'simpan'])->name('data.simpan');
+

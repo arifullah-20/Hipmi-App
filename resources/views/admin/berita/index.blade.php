@@ -27,7 +27,7 @@ Berita
                 @foreach ($berita as $data)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $data->judul_berita }}</td>
+                    <td>{{ \Illuminate\Support\Str::limit($data->judul_berita, 30) }}</td>
                     <td>{{ $data->tanggal_berita }}</td>
                     <td><img src="{{ asset('images/berita/'.$data->foto_berita) }}" alt="" width="100px"></td>
 

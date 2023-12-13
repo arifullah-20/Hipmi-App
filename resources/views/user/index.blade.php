@@ -80,7 +80,7 @@
     {{-- ini l --}}
 
     <!-- Topbar Start -->
-    <div class="container-fluid  px-5 d-none d-lg-block" style="background-color: #061429">
+    <div class="container-fluid  px-5 d-none d-lg-block" style="background-color: #91601a">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -99,6 +99,7 @@
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
                             class="fab fa-linkedin-in fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+
                             class="fab fa-instagram fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i
                             class="fab fa-youtube fw-normal"></i></a>
@@ -133,7 +134,7 @@
                             <a href="/foto" class="dropdown-item">Foto</a>
                         </div>
                     </div>
-                    <a href="/contact" class="nav-item nav-link">Join</a>
+                    <a href="/contact" class="nav-item nav-link" style="">Join</a>
                 </div>
                 <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal"
                     data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>

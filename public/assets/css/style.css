@@ -128,7 +128,7 @@ h6,
     position: relative;
     margin-left: 25px;
     padding: 35px 0;
-    color: #bbbb4a;
+    color: #EEF9FF;
     font-size: 18px;
     font-weight: 600;
     outline: none;
@@ -138,7 +138,7 @@ h6,
 .sticky-top.navbar .navbar-nav .nav-link {
     padding: 20px 0;
     /* color: var(--dark); */
-    color: aqua;
+    color: #000000;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -221,7 +221,7 @@ h6,
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(9, 30, 62, .7);
+    background: rgba(7, 11, 18, 0.7);
     z-index: 1;
 }
 
